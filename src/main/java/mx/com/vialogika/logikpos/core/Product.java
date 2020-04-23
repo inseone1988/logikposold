@@ -35,4 +35,8 @@ public class Product {
     public BigDecimal getPrice(int quantity) {
         return priceList.size() > 1 ? priceList.stream().filter(price -> price.match(quantity)).findFirst().get().getValue(): priceList.get(0).getValue();
     }
+
+    public String getDescription() {
+        return this.description;
+    }
 }
